@@ -7,7 +7,8 @@ namespace ConsoleTestApp
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            TwilloLibrary library = new TwilloLibrary("+420776877148", MessagingManager.TwilioClient);
+            library.SendMessage("Hi, I am Jakub.", "+420776877148", Platforms.SMS);
         }
     }
 }

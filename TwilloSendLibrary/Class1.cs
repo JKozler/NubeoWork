@@ -13,8 +13,8 @@ namespace TwilloSendLibrary
     public class TwilloLibrary
     {
         //These two props references to Twilio 
-        private string AccountSid { get; set; }
-        private string AuthToken { get; set; }
+        public string AccountSid { get; set; }
+        public string AuthToken { get; set; }
         //Referes to current User phone
         public string UserNumber { get; set; }
         public MessagingManager ManagerClientType { get; set; }
@@ -23,7 +23,7 @@ namespace TwilloSendLibrary
         /// Default Constructor of Twilio Library
         /// </summary>
         /// <param name="userNumber">User phone number with prefix</param>
-        public TwilloLibrary(string userNumber, MessagingManager managerClientType)
+        public TwilloLibrary(string accountSid, string authToken, string userNumber, MessagingManager managerClientType)
         {
             //Do not chage these
             AccountSid = Environment.GetEnvironmentVariable("SKd7b1e9d764a09727874ffb174f669cbe");
